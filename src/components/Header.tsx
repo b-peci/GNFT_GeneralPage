@@ -56,7 +56,12 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex justify-end' >
+      <div className='flex justify-between mt-2' >
+        <div>
+          <a href="/mint" className='p-2'>Basic GNFT</a>
+          <a href="/game" className='p-2'>Create Game</a>
+          <a href="/tokens" className='p-2'>Create Tokens for game</a>
+        </div>
         <button onClick={handleButtonClick} className={"bg-blue-500 text-wheat " + (isConnected && accountAddress ? "w-80" : "w-40") + " p-1 rounded-lg m-2 font-bold"}> {isConnected && accountAddress ? accountAddress.substring(0, 11) + "..." + accountAddress.substring(30, 41) : "Connect"} </button>
       </div>
       {showModal &&

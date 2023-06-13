@@ -7,7 +7,6 @@ import BasicGNFTAddress from "../../constants/BasicGNFT/BasicGNFTAddress.json"
 import BasicGNFTABI from "../../constants/BasicGNFT/BasicGNFTABI.json"
 import { MoralisProvider, useMoralis, useWeb3Contract } from 'react-moralis';
 import { NotificationProvider, useNotification } from 'web3uikit';
-import { error } from 'console';
 
 const MintToken = () => {
     const [selectedNFT, setSelectedNFT] = useState('');
@@ -23,7 +22,7 @@ const MintToken = () => {
     },[])
     const dispatch = useNotification();
 
-
+   
     const handleSuccess = async (tx: any) => {
         await tx.wait(1);
         handleNewNotification(tx);
@@ -48,7 +47,6 @@ const MintToken = () => {
             _tokenURI: "Some URIIIIII"
         },
     });
-
     return (
         <>
             <div className='flex justify-center items-center  h-[92vh]'>
