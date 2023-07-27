@@ -27,5 +27,8 @@
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4",
     "web3uikit": "^1.0.4"
+  },
+  "devDependencies": {
+    "daisyui": "^3.5.0"
   }
 }
