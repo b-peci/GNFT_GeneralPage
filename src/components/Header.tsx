@@ -61,6 +61,7 @@ export default function Home() {
           <a href="/mint" className='p-2'>Basic GNFT</a>
           <a href="/game" className='p-2'>Create Game</a>
           <a href="/tokens" className='p-2'>Create Tokens for game</a>
+          <a href="/BasicTokenToGNFT" className='p-2'>Convert Basic token to GNFT</a>
         </div>
         <button onClick={handleButtonClick} className={"bg-blue-500 text-wheat " + (isConnected && accountAddress ? "w-80" : "w-40") + " p-1 rounded-lg m-2 font-bold"}> {isConnected && accountAddress ? accountAddress.substring(0, 11) + "..." + accountAddress.substring(30, 41) : "Connect"} </button>
       </div>

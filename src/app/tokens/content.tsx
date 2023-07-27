@@ -79,21 +79,20 @@ const CreateToken = () => {
     }
     const createToken = () => {
         createGameNFT({
-            onSuccess: async transaction => {
+            onSuccess: async (transaction : any) => {
                 const tx = await transaction.wait(1)
                 console.log(tx.events); 
-                // console.log(res);
-                // Moralis.executeFunction({
-                //     contractAddress: GameAddress["5"][0],
-                //     abi: GameABI,
-                //     functionName: "addGameTokenToGame",
-                //     params: {
-                //         _gameName: selectedGame,
-                //         tokenId: res.toString()
-                //     }
-                // }).then(response => {
-                //     handleSuccess(response);
-                // }).catch(err => console.log(err))
+                Moralis.executeFunction({
+                    contractAddress: GameAddress["5"][0],
+                    abi: GameABI,
+                    functionName: "addGameTokenToGame",
+                    params: {
+                        _gameName: selectedGame,
+                        tokenId: parseInt(tx.events[1].data)
+                    }
+                }).then(response => {
+                    handleSuccess(response);
+                }).catch(err => console.log(err))
             },
             onError: err => console.log(err)
         })
