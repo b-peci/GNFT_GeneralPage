@@ -2,8 +2,3 @@ node_modules
 node_modules
 .env
 .next
-src/constants
-src/constants/BasicGNFT/BasicGNFTABI.json
-src/constants/BasicGNFT/BasicGNFTAddress.json
-src/constants/Token/TokenABI.json
-src/constants/Token/TokenAddress.json
