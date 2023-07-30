@@ -9,7 +9,7 @@ import TokenABI from "@/constants/Token/TokenABI.json"
 import BasicGNFTAddress from "../../constants/BasicGNFT/BasicGNFTAddress.json"
 import BasicGNFTABI from "../../constants/BasicGNFT/BasicGNFTABI.json"
 
-interface iTokenData {
+export interface iTokenData {
     tokenId: number;
     tokenUri: string;
     tokenFunctionality: string;
@@ -21,7 +21,6 @@ const ConvertBasicTokenToGNFT = () => {
     const [gameName, setGameName] = useState('');
     const { Moralis } = useMoralis();
     let account;
-    const tokenData = new Map<number, iTokenData>();
 
     useEffect(() => {
         Moralis.enableWeb3();
@@ -44,14 +43,6 @@ const ConvertBasicTokenToGNFT = () => {
             userAddress: Moralis.account
         },
     });
-    const { runContractFunction: swapTokens } = useWeb3Contract({
-        abi: TokenABI,
-        contractAddress: TokenAddress["5"][0],
-        functionName: "swapTokens",
-        params: {
-            userAddress: Moralis.account
-        },
-    });
 
     const swapUserGNFTBasicTokens = (basicTokenIds : number[], tokenToSwapForId : number) => {
         Moralis.executeFunction({
@@ -66,49 +57,6 @@ const ConvertBasicTokenToGNFT = () => {
             console.log(response)
         }).catch(err => console.log(err))
     }
-
-    // const { runContractFunction: getFireTokenIds } = useWeb3Contract({
-    //     abi: TokenABI,
-    //     contractAddress: TokenAddress["5"][0],
-    //     functionName: "getFireTokenIds",
-    //     params: {
-    //         _name: gameName
-    //     },
-    // });
-    // const { runContractFunction: getWaterTokenIds } = useWeb3Contract({
-    //     abi: TokenABI,
-    //     contractAddress: TokenAddress["5"][0],
-    //     functionName: "getWaterTokenIds",
-    //     params: {
-    //         _name: gameName
-    //     },
-    // });
-    // const { runContractFunction: getEarthTokenIds } = useWeb3Contract({
-    //     abi: TokenABI,
-    //     contractAddress: TokenAddress["5"][0],
-    //     functionName: "getEarthTokenIds",
-    //     params: {
-    //         _name: gameName
-    //     },
-    // });
-
-  
-
-    const getTokenData = (tokenId : number | string) => {
-        Moralis.executeFunction({
-            contractAddress: TokenAddress["5"][0],
-            abi: TokenABI,
-            functionName: "getTokenData",
-            params: {
-                tokenId: tokenId
-            }
-        }).then(response => {
-            console.log(response)
-        }).catch(err => console.log(err))
-    }
-
-    
-
 
     const btnClickHandler = async () => {
         getGameTokens().then((res : any) => {
@@ -145,8 +93,6 @@ const ConvertBasicTokenToGNFT = () => {
              <div className="flex">
              {
                 gameTokens.map((item : iTokenData, index : number) => {
-                    console.log(item);
-                    tokenData.set(item.tokenId, item);
                     return (
                         <div key={index} className="my-10 mx-5">
                         <div className="card w-96 bg-neutral text-neutral-content">
