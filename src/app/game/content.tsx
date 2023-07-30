@@ -46,7 +46,7 @@ const CreateGame = () => {
         <>
             <div className="mt-2">
                 <label className="p-2">Game Name</label>
-                <input value={gameName} name="gameName"  onChange={e => setGameName(e.target.value)} type="text" className="rounded-sm text-black" />
+                <input value={gameName} name="gameName"  onChange={e => setGameName(e.target.value)} type="text" className="input input-bordered w-full max-w-xs ml-2"/>
                 <button onClick={handleClick} className='bg-blue-500 self-center text-wheat p-1 rounded-lg m-2 font-bold w-40'>Create</button>
             </div>
 

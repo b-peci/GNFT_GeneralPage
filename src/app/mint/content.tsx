@@ -40,7 +40,7 @@ const MintToken = () => {
 
     const { runContractFunction: mintBasicToken } = useWeb3Contract({
         abi: BasicGNFTABI,
-        contractAddress: BasicGNFTAddress["31337"][0],
+        contractAddress: BasicGNFTAddress["5"][0],
         functionName: "createToken",
         params: {
             _type: '0',
