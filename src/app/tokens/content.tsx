@@ -102,27 +102,27 @@ const CreateToken = () => {
         <>
             <div className="mt-2">
                 <label className="p-2"> Token URI</label>
-                <input onChange={e => setTokenURI(e.target.value)} type="text" className="rounded-sm text-black" />
+                <input onChange={e => setTokenURI(e.target.value)} type="text" className="input input-bordered w-full max-w-xs ml-2" />
             </div>
             <div className="mt-2">
                 <label className="p-2"> Token Functionality</label>
-                <input onChange={e => setTokenFunctionality(e.target.value)} type="text" className="rounded-sm text-black" />
+                <input onChange={e => setTokenFunctionality(e.target.value)} type="text" className="input input-bordered w-full max-w-xs ml-2" />
             </div>
             <div className="mt-2">
                 <label className="p-2">Fire Req: </label>
-                <input onChange={e => setFireReq(parseInt(e.target.value))} type="number" className="rounded-sm text-black" />
+                <input onChange={e => setFireReq(parseInt(e.target.value))} type="number" className="input input-bordered w-full max-w-xs ml-2" />
             </div>
             <div className="mt-2">
                 <label className="p-2">Water Req: </label>
-                <input onChange={e => setWaterReq(parseInt(e.target.value))} type="number" className="rounded-sm text-black" />
+                <input onChange={e => setWaterReq(parseInt(e.target.value))} type="number" className="input input-bordered w-full max-w-xs ml-2" />
             </div>
             <div className="mt-2">
                 <label className="p-2">Earth Req: </label>
-                <input onChange={e => setEarthReq(parseInt(e.target.value))} type="number" className="rounded-sm text-black" />
+                <input onChange={e => setEarthReq(parseInt(e.target.value))} type="number" className="input input-bordered w-full max-w-xs ml-2" />
             </div>
             <div className="mt-2">
                 <label className="p-2">Wind Req: </label>
-                <input onChange={e => setWindReq(parseInt(e.target.value))} type="number" className="rounded-sm text-black" />
+                <input onChange={e => setWindReq(parseInt(e.target.value))} type="number" className="input input-bordered w-full max-w-xs ml-2" />
             </div>
             <div className="mt-2">
                 <label className="p-2">Game</label>
