@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+UniversalGNFT Next.js UI Project
 
-## Getting Started
+Welcome to the UniversalGNFT Next.js UI Project! This repository contains the user interface (UI) part of the UniversalGNFT project, which interacts with the Solidity smart contracts deployed on the blockchain.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The UniversalGNFT project aims to create a decentralized application (DApp) for managing and trading non-fungible tokens (NFTs) using blockchain technology. The project is divided into two main parts: the Solidity smart contracts backend and the Next.js UI frontend.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    The Solidity Smart Contracts (located in the UniversalGNFT backend repository) handle the core functionality of creating, transferring, and managing NFTs on the blockchain.
+    The Next.js UI (this repository) provides a user-friendly interface for users to interact with the smart contracts. It allows users to view their NFTs, trade them, and manage their account.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Getting Started
+Prerequisites
 
-## Learn More
+Before you begin, ensure you have the following installed:
 
-To learn more about Next.js, take a look at the following resources:
+    Node.js: Download Node.js
+    Yarn (optional but recommended): Install Yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    Clone this repository to your local machine:
 
-## Deploy on Vercel
+    bash
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+git clone https://github.com/your-username/UniversalGNFT-nextjs.git
+cd UniversalGNFT-nextjs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Install the required dependencies:
+
+bash
+
+    yarn install
+    # or npm install
+
+Usage
+
+    Start the Next.js development server:
+
+    bash
+
+    yarn dev
+    # or npm run dev
+
+    Open your web browser and navigate to http://localhost:3000 to access the UniversalGNFT UI.
+
+    Connect your wallet (e.g., MetaMask) to interact with the blockchain. Make sure you are connected to the same blockchain network where the UniversalGNFT smart contracts are deployed.
+
+    Explore the UI to view your NFTs, trade them, and manage your account.
+
+Contributing
+
+We welcome contributions to the UniversalGNFT project! To contribute:
+
+    Fork this repository.
+    Create a new branch for your feature: git checkout -b feature/YourFeatureName
+    Commit your changes and push them to your fork.
+    Create a pull request describing your changes.
+
+Please make sure to follow our Code of Conduct when contributing.
+License
+
+This project is licensed under the MIT License.
